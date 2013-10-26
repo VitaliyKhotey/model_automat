@@ -3,6 +3,7 @@
 using namespace std;
 int main(int argc, const char * argv[])
 {
+    //sdsfdsfsd
     Specialist *s=new Specialist();
     Automat *a= new Automat();
     Drink* cola=new Drink("Cola",5.0);
