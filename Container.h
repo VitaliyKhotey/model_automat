@@ -20,9 +20,12 @@ public:
     Container();
     ~Container();
     const double MAX_VOLUME=5000;
+    const double STANDART_VOLUME=4000;
     Drink* get_drink();
     double get_volume();
+    void fill_max(Drink*);
     void fill(Drink*);
+    void fill();
 
 private:
     Drink* drink;
@@ -30,7 +33,13 @@ private:
 
     friend std::ostream& operator<<(std::ostream& out,const Container* c)
     {
-        out<<c->drink<<" ="<<c->volume<<"ml\n";
+        if (c->drink!=NULL) {
+             out<<c->drink<<" ="<<c->volume<<"ml\n";
+        }else
+        {
+            out<<"container is empty\n";
+        }
+       
         return out;
     }
 };
