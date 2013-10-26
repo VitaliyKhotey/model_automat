@@ -17,6 +17,7 @@ int main(int argc, const char * argv[])
     cout<<fanta;
     cout<<a->get_containers()->at(1);
     s->add_coins();
+    s->fill_in_drinks();
 
     return 0;
 }
