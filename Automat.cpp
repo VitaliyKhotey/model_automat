@@ -53,7 +53,7 @@ void Automat::set_money(double money)
     this->money=money;
 }
 
-/*void set_clientmoney(double money)
+void Automat::set_clientmoney(double money)
  {
- client_money=money;
- }*/
+ this->client_money = money;
+ }
