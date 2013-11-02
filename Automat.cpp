@@ -37,3 +37,23 @@ bool Automat::is_locked()
 {
     return lock;
 }
+
+double Automat::get_money()
+{
+    return money;
+}
+
+double  Automat::get_clientmoney()
+{
+    return client_money;
+}
+
+void Automat::set_money(double money)
+{
+    this->money=money;
+}
+
+/*void set_clientmoney(double money)
+ {
+ client_money=money;
+ }*/
