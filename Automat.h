@@ -18,6 +18,8 @@ public:
     std::vector<Container*>* get_containers();
     bool is_locked();
     friend class Specialist;
+    void show_suitable_banknots();
+    void get_list_drinks();
 
 private:
     double money;

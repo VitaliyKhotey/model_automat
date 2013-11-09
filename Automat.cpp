@@ -57,3 +57,16 @@ void Automat::set_clientmoney(double money)
  {
  this->client_money = money;
  }
+
+void Automat::show_suitable_banknots()
+{
+    std::cout<<"Waring : Enter 2,5,10 $\n ";
+}
+
+void Automat::get_list_drinks()
+{
+    for (int i=0; i<MAX_CONTAINERS; i++)
+    {
+        std::cout<<"#"<<i+1<<" "<<containers->at(i)->get_drink();
+    }
+}

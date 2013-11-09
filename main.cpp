@@ -17,6 +17,8 @@ int main(int argc, const char * argv[])
     cout<<a->get_containers()->at(1);
     s->add_coins();
     s->fill_in_drinks();
+    cout<<"-----------------------------------\n";
+    
 
     return 0;
 }
