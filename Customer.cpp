@@ -6,12 +6,7 @@
 //  Copyright (c) 2013 Vitaly. All rights reserved.
 //
 
-#include "Customer .h"
-
-Customer::Customer()
-{
-    
-}
+#include "Customer.h"
 
 
 void Customer::get_list_drinks()
