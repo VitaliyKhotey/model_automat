@@ -1,8 +1,7 @@
 #include <iostream>
 #include "Specialist.h"
 #include "Customer.h"
-//#include "Display.h"
-using namespace std;
+
 int main(int argc, const char * argv[])
 {
     Specialist *s=new Specialist();
@@ -26,7 +25,7 @@ int main(int argc, const char * argv[])
 
     s->add_coins();
     s->fill_in_drinks();
-    cout<<"-----------------------------------\n";
+    std::cout<<"-----------------------------------\n";
 
     Display *d = new Display(a);
     Customer *c = new Customer();

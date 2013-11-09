@@ -31,4 +31,5 @@ private:
     std::vector<Container*> *containers;
 
 };
-#endif /* defined(__Model_automat__Customer___) */
+
+#endif

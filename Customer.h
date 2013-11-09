@@ -4,7 +4,6 @@
 #include <iostream>
 #include "Display.h"
 
-
 class Customer
 {
 public:
@@ -16,4 +15,5 @@ private:
     Display *dislpay=0;
 
 };
-#endif /* defined(__Model_automat__Customer___) */
+
+#endif

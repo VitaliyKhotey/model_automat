@@ -4,7 +4,6 @@
 #include <iostream>
 #include "Automat.h"
 
-
 class Display
 {
 private:
@@ -16,4 +15,4 @@ public:
 
 };
 
-#endif /* defined(__Model_automat__Display__) */
+#endif

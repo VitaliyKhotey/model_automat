@@ -6,7 +6,7 @@ Automat::Automat()
     for (int i=0; i<MAX_CONTAINERS; i++)
     {
         containers->at(i)=new Container();
-       // std::cout<<"#"<<i<<" created\n";
+        // std::cout<<"#"<<i<<" created\n";
     }
 }
 

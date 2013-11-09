@@ -4,8 +4,6 @@
 #include <iostream>
 #include "Drink.h"
 
-
-
 class Container
 {
 
@@ -27,9 +25,11 @@ private:
 
     friend std::ostream& operator<<(std::ostream& out,const Container* c)
     {
-        if (c->drink!=NULL) {
-             out<<c->drink<<" ="<<c->volume<<"ml\n";
-        }else
+        if (c->drink!=NULL)
+        {
+            out<<c->drink<<" ="<<c->volume<<"ml\n";
+        }
+        else
         {
             out<<"container is empty\n";
         }
@@ -37,4 +37,5 @@ private:
         return out;
     }
 };
-#endif /* defined(__Model_automat__Customer___) */
+
+#endif
