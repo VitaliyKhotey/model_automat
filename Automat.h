@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Automat___
-#define __Model_automat__Automat___
+#ifndef Automat__
+#define Automat__
 
 #include <iostream>
 #include "Container.h"

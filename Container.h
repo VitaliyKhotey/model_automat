@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Container___
-#define __Model_automat__Container___
+#ifndef Container__
+#define Container__
 
 #include <iostream>
 #include "Drink.h"

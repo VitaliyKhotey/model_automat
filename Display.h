@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Display__
-#define __Model_automat__Display__
+#ifndef Display__
+#define Display__
 
 #include <iostream>
 #include "Automat.h"

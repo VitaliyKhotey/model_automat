@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Drink___
-#define __Model_automat__Drink___
+#ifndef Drink___
+#define Drink___
 
 #include <iostream>
 #include <string>

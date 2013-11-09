@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Specialist___
-#define __Model_automat__Specialist___
+#ifndef Specialist___
+#define Specialist___
 
 #include <iostream>
 #include "Automat.h"

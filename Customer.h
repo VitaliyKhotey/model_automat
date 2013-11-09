@@ -1,5 +1,5 @@
-#ifndef __Model_automat__Customer___
-#define __Model_automat__Customer___
+#ifndef Customer___
+#define Customer___
 
 #include <iostream>
 #include "Display.h"
