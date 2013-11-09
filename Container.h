@@ -1,16 +1,10 @@
-//
-//  Container.h
-//  model_automat
-//
-//  Created by Vitaly Khotey on 07.10.13.
-//  Copyright (c) 2013 Vitaly Khotey. All rights reserved.
-//
-
-
-#define __model_automat__Container__
+#ifndef __Model_automat__Container___
+#define __Model_automat__Container___
 
 #include <iostream>
 #include "Drink.h"
+
+
 
 class Container
 {
@@ -39,7 +33,8 @@ private:
         {
             out<<"container is empty\n";
         }
-       
+
         return out;
     }
 };
+#endif /* defined(__Model_automat__Customer___) */

@@ -1,3 +1,6 @@
+#ifndef __Model_automat__Drink___
+#define __Model_automat__Drink___
+
 #include <iostream>
 #include <string>
 
@@ -22,3 +25,4 @@ private:
 
 };
 
+#endif /* defined(__Model_automat__Customer___) */

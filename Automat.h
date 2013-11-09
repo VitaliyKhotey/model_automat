@@ -1,3 +1,6 @@
+#ifndef __Model_automat__Automat___
+#define __Model_automat__Automat___
+
 #include <iostream>
 #include "Container.h"
 #include "vector"
@@ -28,3 +31,4 @@ private:
     std::vector<Container*> *containers;
 
 };
+#endif /* defined(__Model_automat__Customer___) */

@@ -6,9 +6,8 @@ Automat::Automat()
     for (int i=0; i<MAX_CONTAINERS; i++)
     {
         containers->at(i)=new Container();
-        std::cout<<"#"<<i<<" created\n";
+       // std::cout<<"#"<<i<<" created\n";
     }
-    std::cout<<"Automat creted\n";
 }
 
 Automat::~Automat()
@@ -54,9 +53,9 @@ void Automat::set_money(double money)
 }
 
 void Automat::set_clientmoney(double money)
- {
- this->client_money = money;
- }
+{
+    this->client_money = money;
+}
 
 void Automat::show_suitable_banknots()
 {
@@ -67,6 +66,8 @@ void Automat::get_list_drinks()
 {
     for (int i=0; i<MAX_CONTAINERS; i++)
     {
-        std::cout<<"#"<<i+1<<" "<<containers->at(i)->get_drink();
+        Drink *d ;
+        if((d = containers->at(i)->get_drink())!=NULL)
+            std::cout<<"#"<<i+1<<" "<<d<<"\n";
     }
 }

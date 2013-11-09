@@ -1,3 +1,6 @@
+#ifndef __Model_automat__Specialist___
+#define __Model_automat__Specialist___
+
 #include <iostream>
 #include "Automat.h"
 
@@ -18,3 +21,5 @@ private:
     Automat* automat;
 
 };
+
+#endif /* defined(__Model_automat__Customer___) */

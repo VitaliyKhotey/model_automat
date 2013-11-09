@@ -3,7 +3,6 @@
 
 Specialist::Specialist()
 {
-    std::cout<<"spec created\n";
 };
 
 Specialist::~Specialist()
@@ -52,12 +51,12 @@ void Specialist::close()
 void Specialist::fill_in_drinks()
 {
     for (int i=0; i<5; i++) {
-        
+
             automat->get_containers()->at(i)->fill();
         std::cout<<"container number #"<<i+1<<" "<<automat->get_containers()->at(i);
     }
 
-    
+
 }
 
 void Specialist::add_coins()
