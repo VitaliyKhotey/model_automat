@@ -31,6 +31,8 @@ int main(int argc, const char * argv[])
     Customer *c = new Customer();
     c->set_display(d);
     c->get_list_drinks();
+    c->insert_money(4);
+    c->buy_drink(1);
 
 
     return 0;

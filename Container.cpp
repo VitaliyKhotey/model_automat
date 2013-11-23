@@ -55,3 +55,16 @@ Drink* Container::get_drink()
 {
     return this->drink;
 }
+
+
+void Container::set_volume(double volume)
+{
+    this->volume=volume;
+}
+
+double Container::get_volume()
+{
+    return this->volume;
+}
+
+

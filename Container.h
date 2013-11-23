@@ -18,6 +18,7 @@ public:
     void fill_max(Drink*);
     void fill(Drink*);
     void fill();
+    void set_volume(double);
 
 private:
     Drink* drink;

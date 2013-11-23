@@ -42,7 +42,7 @@ double Automat::get_money()
     return money;
 }
 
-double  Automat::get_clientmoney()
+double  Automat::get_client_money()
 {
     return client_money;
 }
@@ -52,7 +52,7 @@ void Automat::set_money(double money)
     this->money=money;
 }
 
-void Automat::set_clientmoney(double money)
+void Automat::set_client_money(double money)
 {
     this->client_money = money;
 }
@@ -68,6 +68,30 @@ void Automat::get_list_drinks()
     {
         Drink *d ;
         if((d = containers->at(i)->get_drink())!=NULL)
-            std::cout<<"#"<<i+1<<" "<<d<<"\n";
+        {std::cout<<"#"<<i+1<<" "<<d<<"\n";}
+    }
+}
+
+
+double Automat::get_price(int number)
+{
+    return get_containers()->at(number)->get_drink()->get_price();
+    
+}
+
+double Automat::get_volume(int number)
+{
+    return get_containers()->at(number)->get_volume();
+}
+
+void Automat::give_drink(int number)
+{
+    if(get_volume(number)>=50)
+    {
+        get_containers()->at(number)->set_volume(this->get_volume(number)-PORTION);
+        std::cout<<"Take drink"<<get_containers()->at(number)->get_drink();
+    }
+    else{
+        std::cout<<"Container is empty, choose another\n";
     }
 }

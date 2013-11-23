@@ -12,6 +12,10 @@ public:
     Display(Automat *a);
     ~Display();
     void get_list_drinks();
+    void insert_money(double);
+    int get_quantityDrink();
+    void buy_drink(int number);
+    bool validate_money(int number);
 
 };
 

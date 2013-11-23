@@ -8,11 +8,11 @@ class Customer
 {
 public:
     void get_list_drinks();
-    void insert_money();
+    void insert_money(double);
     void buy_drink(int number);
     void set_display(Display*);
 private:
-    Display *dislpay=0;
+    Display *dislpay=NULL;
 
 };
 
