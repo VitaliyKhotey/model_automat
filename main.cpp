@@ -34,6 +34,7 @@ int main(int argc, const char * argv[])
     c->insert_money(1.5);
     c->buy_drink(1);
     s->show_all_volumes();
+    c->get_change();
 
 
     return 0;

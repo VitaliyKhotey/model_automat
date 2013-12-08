@@ -60,3 +60,9 @@ void Display::buy_drink(int number)
     show_balance();
         
 }
+
+void Display::get_change() {
+    std::cout<<"Your change is "<<automat->get_client_money()<<"$\n";
+    automat->set_client_money(0);
+    
+}

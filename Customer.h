@@ -11,6 +11,7 @@ public:
     void insert_money(double);
     void buy_drink(int number);
     void set_display(Display*);
+    void get_change();
 private:
     Display *dislpay=NULL;
 

@@ -18,6 +18,8 @@ public:
     bool is_enough(int number);
     void show_balance();
     bool validate_money(double);
+    void get_change ();
+
     
 
 };

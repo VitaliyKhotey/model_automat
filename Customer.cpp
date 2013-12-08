@@ -25,6 +25,8 @@ void Customer::buy_drink(int number)
     }
     else
         std::cout<<"incorrect number\n";
-    
-    
+}
+
+void Customer::get_change() {
+    this->dislpay->get_change();
 }
