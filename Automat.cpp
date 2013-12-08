@@ -59,7 +59,7 @@ void Automat::set_client_money(double money)
 
 void Automat::show_suitable_banknots()
 {
-    std::cout<<"Waring : Enter 2,5,10 $\n ";
+    std::cout<<"####Enter paper money or 50 cents####\n";
 }
 
 void Automat::get_list_drinks()
@@ -86,12 +86,29 @@ double Automat::get_volume(int number)
 
 void Automat::give_drink(int number)
 {
-    if(get_volume(number)>=50)
+    if(get_volume(number)>=PORTION)
     {
+        //Decrease containers volume
         get_containers()->at(number)->set_volume(this->get_volume(number)-PORTION);
-        std::cout<<"Take drink"<<get_containers()->at(number)->get_drink();
+        std::cout<<"Take drink "<<get_containers()->at(number)->get_drink()<<"\n";
+        
+        //decrease clients money
+        this->set_client_money(get_client_money()-get_price(number));
+        //increase automat money
+        set_money(this->get_money()+get_price(number));
+        
+        
     }
     else{
-        std::cout<<"Container is empty, choose another\n";
+        std::cout<<"####Container is empty, choose another####\n";
     }
+}
+
+void Automat::show_all_volumes(){
+    std::cout<<"---------INFO FOR SPECIALIST---------\n";
+    for (int i=0; i<5; i++)
+    {
+        std::cout<<"container number #"<<i+1<<" "<<get_containers()->at(i);
+    }
+    std::cout<<"Automat money: "<<get_money()<<"\n";
 }

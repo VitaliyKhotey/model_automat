@@ -10,7 +10,7 @@ class Automat
 public:
     Automat();
     ~Automat();
-    const double PORTION = 50;
+    const double PORTION = 350;
     const int MAX_CONTAINERS=5;
     const double MAX_MONEY=300.0;
     double get_money();
@@ -27,6 +27,7 @@ public:
     double get_price(int number);
     void give_drink(int number);
     double get_volume(int number);
+    void show_all_volumes();
     
 
 private:

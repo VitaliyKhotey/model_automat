@@ -16,6 +16,8 @@ public:
     void fill_in_drinks();
     void add_coins();
     void set_automat(Automat*);
+    Automat* get_automat();
+    void show_all_volumes();
 
 private:
     Automat* automat;

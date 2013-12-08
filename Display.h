@@ -15,7 +15,10 @@ public:
     void insert_money(double);
     int get_quantityDrink();
     void buy_drink(int number);
-    bool validate_money(int number);
+    bool is_enough(int number);
+    void show_balance();
+    bool validate_money(double);
+    
 
 };
 

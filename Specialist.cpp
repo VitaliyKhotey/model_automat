@@ -27,6 +27,11 @@ void Specialist::open_lock()
         std::cout<<"Alert Automat is already unlocked\n";
 }
 
+Automat *Specialist::get_automat() {
+    return this->automat;
+}
+
+
 void Specialist::close_lock()
 {
     if(!automat->is_locked())
@@ -54,16 +59,19 @@ void Specialist::fill_in_drinks()
     {
 
         automat->get_containers()->at(i)->fill();
-        std::cout<<"container number #"<<i+1<<" "<<automat->get_containers()->at(i);
     }
-
-
+    automat->show_all_volumes();
 }
 
 void Specialist::add_coins()
 {
     std::cout<<"inserted "<<automat->MAX_MONEY-automat->money<<"\n";
     automat->money=automat->MAX_MONEY;
+}
+
+
+void Specialist::show_all_volumes() {
+    automat->show_all_volumes();
 }
 
 
