@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "Automat.h"
-
+class Automat;
 class Display
 {
 private:

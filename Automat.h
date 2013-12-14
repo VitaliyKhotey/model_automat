@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "Container.h"
+#include "Display.h"
 #include "vector"
-
+class Display;
 class Automat
 {
 public:
@@ -28,6 +29,7 @@ public:
     void give_drink(int number);
     double get_volume(int number);
     void show_all_volumes();
+    Display* getDisplay();
     
 
 private:
@@ -35,7 +37,7 @@ private:
     double client_money;
     bool lock=true;
     std::vector<Container*> *containers;
-
+    Display* display;
 };
 
 #endif

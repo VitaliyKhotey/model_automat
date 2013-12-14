@@ -18,6 +18,7 @@ public:
     void set_automat(Automat*);
     Automat* get_automat();
     void show_all_volumes();
+    void take_profit();
 
 private:
     Automat* automat;

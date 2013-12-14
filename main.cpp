@@ -25,9 +25,9 @@ int main(int argc, const char * argv[])
     s->fill_in_drinks();
     std::cout<<"--------------------TEST---------------\n";
 
-    Display *d = new Display(a);
+    //Display *d = new Display(a);
     Customer *c = new Customer();
-    c->set_display(d);
+    c->set_display(a->getDisplay());
     c->get_list_drinks();
     c->insert_money(2);
     c->insert_money(2);
@@ -35,6 +35,8 @@ int main(int argc, const char * argv[])
     c->buy_drink(1);
     s->show_all_volumes();
     c->get_change();
+    s->take_profit();
+    s->show_all_volumes();
 
 
     return 0;

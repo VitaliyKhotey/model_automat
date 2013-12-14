@@ -66,7 +66,7 @@ void Specialist::fill_in_drinks()
 void Specialist::add_coins()
 {
     std::cout<<"inserted "<<automat->MAX_MONEY-automat->money<<"\n";
-    automat->money=automat->MAX_MONEY;
+    automat->set_money(automat->MAX_MONEY);
 }
 
 
@@ -74,6 +74,12 @@ void Specialist::show_all_volumes() {
     automat->show_all_volumes();
 }
 
+
+void Specialist::take_profit()
+{
+    std::cout<<"Profit = "<<automat->get_money()-automat->MAX_MONEY<<"$\n";
+    automat->set_money(automat->MAX_MONEY);
+}
 
 
 

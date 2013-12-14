@@ -8,6 +8,7 @@ Automat::Automat()
         containers->at(i)=new Container();
         // std::cout<<"#"<<i<<" created\n";
     }
+    this->display = new Display(this);
 }
 
 Automat::~Automat()
@@ -111,4 +112,8 @@ void Automat::show_all_volumes(){
         std::cout<<"container number #"<<i+1<<" "<<get_containers()->at(i);
     }
     std::cout<<"Automat money: "<<get_money()<<"\n";
+}
+
+Display* Automat::getDisplay() {
+    return this->display;
 }
