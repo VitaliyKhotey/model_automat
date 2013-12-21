@@ -78,8 +78,11 @@ void Specialist::add_coins()
 {
     if(automat->is_open())
     {
+        if (this->automat->money<automat->MAX_MONEY) {
+        
     std::cout<<"inserted "<<automat->MAX_MONEY-automat->money<<"\n";
     automat->set_money(automat->MAX_MONEY);
+    }
     }
     else {
         std::cout<<"Can't add coins, automat is closed"<<"\n";

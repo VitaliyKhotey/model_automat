@@ -19,7 +19,7 @@ class Model
 public:
     void do_spec_job(Automat*);
     void do_cust_job(Automat*, int n);
-    Model(Specialist*,Customer*);
+    Model(Specialist*);
 private:
     Specialist *specialist;
     Customer *customer;

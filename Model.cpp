@@ -8,10 +8,10 @@
 
 #include "Model.h"
 
-Model::Model(Specialist* s,Customer* c)
+Model::Model(Specialist* s)
 {
     this->specialist=s;
-    this->customer=c;
+    this->customer= new Customer();
 }
 
 void Model::do_cust_job(Automat* a,int n){
@@ -25,8 +25,10 @@ void Model::do_cust_job(Automat* a,int n){
 }
 
 void Model::do_spec_job(Automat* a){
-    specialist->show_all_volumes();
+    
+    
     specialist->set_automat(a);
+    specialist->show_all_volumes();
     specialist->open_lock();
     specialist->open();
     specialist->add_coins();

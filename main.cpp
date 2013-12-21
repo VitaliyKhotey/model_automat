@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Specialist.h"
 #include "Customer.h"
+#include "Model.h"
 
 
 int main(int argc, const char * argv[])
@@ -17,30 +18,14 @@ int main(int argc, const char * argv[])
     a->fill_container(2, pepsi);
     a->fill_container(3, sprite);
     a->fill_container(4, tea);
-    //specialist
-    s->show_all_volumes();
-    s->open_lock();
-    s->open();
-    s->add_coins();
-    s->fill_in_drinks();
+    Model *m = new Model(s);
+    //TEST
     
-    std::cout<<"--------------------TEST---------------\n";
-
-    //Display *d = new Display(a);
-    Customer *c = new Customer();
-    c->set_display(a->getDisplay());
-    c->get_list_drinks();
-    c->insert_money(2);
-    c->insert_money(2);
-    c->insert_money(100);
-    c->buy_drink(1);
-    s->show_all_volumes();
-    s->fill_in_drinks();
-    c->get_change();
-    //s->take_profit();
-    s->show_all_volumes();
-
-
+    for (int i=0; i<10; i++)
+    {
+        m->do_spec_job(a);
+        m->do_cust_job(a, i);
+    }
     return 0;
 }
 
