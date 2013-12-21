@@ -11,7 +11,7 @@ class Automat
 public:
     Automat();
     ~Automat();
-    const double PORTION = 350;
+    const double PORTION = 400;
     const int MAX_CONTAINERS=5;
     const double MAX_MONEY=300.0;
     double get_money();
@@ -22,6 +22,8 @@ public:
     void fill_container(int index, Drink *drink);
     std::vector<Container*>* get_containers();
     bool is_locked();
+    bool is_open();
+    void open_close();
     friend class Specialist;
     void show_suitable_banknots();
     void get_list_drinks();
@@ -36,6 +38,7 @@ private:
     double money;
     double client_money;
     bool lock=true;
+    bool open=false;
     std::vector<Container*> *containers;
     Display* display;
 };

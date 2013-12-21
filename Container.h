@@ -13,6 +13,7 @@ public:
     ~Container();
     const double MAX_VOLUME=5000;
     const double STANDART_VOLUME=4000;
+    const double START_VOLUME=0;
     Drink* get_drink();
     double get_volume();
     void fill_max(Drink*);

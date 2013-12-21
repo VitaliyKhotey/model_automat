@@ -38,6 +38,20 @@ bool Automat::is_locked()
     return lock;
 }
 
+void Automat::open_close()
+{
+    if(open){
+        open=false;}
+    else{
+        
+        open=true;}
+}
+
+bool Automat::is_open()
+{
+    return open;
+}
+
 double Automat::get_money()
 {
     return money;

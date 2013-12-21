@@ -34,11 +34,11 @@ void Container::fill(Drink* drink)
     if(this->drink==NULL)
     {
         this->drink=drink;
-        volume=STANDART_VOLUME;
+        volume=START_VOLUME;
     }
     else if(this->drink->get_name()==drink->get_name())
     {
-        volume=STANDART_VOLUME;
+        volume=START_VOLUME;
     }
     else std::cout<<"container already has "<<this->drink->get_name()<<" "<<this->volume<<"ml\n";
 }

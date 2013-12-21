@@ -44,29 +44,46 @@ void Specialist::close_lock()
 }
 
 void Specialist::open()
-{
-    std::cout<<"Automat is opened";
+{   if(!automat->is_locked()){
+    if(!automat->is_open())
+    automat->open_close();
+    std::cout<<"Automat is opened"<<"\n";}
+    else std::cout<<"can't open , becouse automat is locked"<<"\n";
+    
 }
 
 void Specialist::close()
 {
+    if (automat->is_open())
+        automat->open_close();
     std::cout<<"Automat is closed";
 }
 
 void Specialist::fill_in_drinks()
 {
+    if(automat->is_open())
+    {
     for (int i=0; i<5; i++)
     {
 
         automat->get_containers()->at(i)->fill();
     }
-    automat->show_all_volumes();
+    }
+    else {
+        std::cout<<"Can't fill, automat is closed"<<"\n";
+    }
 }
 
 void Specialist::add_coins()
 {
+    if(automat->is_open())
+    {
     std::cout<<"inserted "<<automat->MAX_MONEY-automat->money<<"\n";
     automat->set_money(automat->MAX_MONEY);
+    }
+    else {
+        std::cout<<"Can't add coins, automat is closed"<<"\n";
+    }
 }
 
 
@@ -77,8 +94,14 @@ void Specialist::show_all_volumes() {
 
 void Specialist::take_profit()
 {
+    if(automat->is_open())
+    {
     std::cout<<"Profit = "<<automat->get_money()-automat->MAX_MONEY<<"$\n";
     automat->set_money(automat->MAX_MONEY);
+    }
+    else {
+        std::cout<<"Can't take profit, automat is closed"<<"\n";
+    }
 }
 
 
